@@ -27,7 +27,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <PageHero eyebrow={formatFrenchDate(article.publishedAt)} title={article.title} />
         <section className="py-14 md:py-24">
           <div className="site-shell">
-            <Link href="/actualites" className="mb-10 inline-flex items-center gap-2 text-sm font-bold text-[#516171] hover:text-[#081a2c]"><ArrowLeft size={17} aria-hidden="true" /> Toutes les actualités</Link>
+            <Link href="/actualites" className="mb-10 inline-flex items-center gap-2 text-sm font-bold text-[#5e6474] hover:text-[#09090d]"><ArrowLeft size={17} aria-hidden="true" /> Toutes les actualités</Link>
             <article className="rich-content max-w-3xl" dangerouslySetInnerHTML={{ __html: article.bodyHtml }} />
           </div>
         </section>

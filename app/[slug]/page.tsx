@@ -28,10 +28,10 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
         <section className="py-14 md:py-24">
           <div className="site-shell grid gap-12 lg:grid-cols-[minmax(0,760px)_280px] lg:justify-between">
             <article className="rich-content" dangerouslySetInnerHTML={{ __html: page.bodyHtml }} />
-            <aside className="h-fit border-t-4 border-[#dfff45] bg-white p-6 shadow-[0_18px_60px_rgba(8,26,44,0.08)] lg:sticky lg:top-8">
-              <p className="text-xs font-black uppercase tracking-[0.12em] text-[#ff3f67]">Envie d’essayer ?</p>
+            <aside className="h-fit border-t-4 border-[#7412b9] bg-white p-6 shadow-[0_18px_60px_rgba(17,21,43,0.08)] lg:sticky lg:top-8">
+              <p className="text-xs font-black uppercase tracking-[0.12em] text-[#7412b9]">Envie d’essayer ?</p>
               <p className="mt-4 text-xl font-extrabold leading-tight tracking-[-0.03em]">Découvre le Kin-Ball avec le club lors d’une séance d’initiation.</p>
-              <Link href="/initiation" className="mt-6 inline-flex items-center gap-2 font-bold text-[#0d2b47] underline decoration-[#ff3f67] decoration-2 underline-offset-4">Voir les initiations <ArrowRight size={17} aria-hidden="true" /></Link>
+              <Link href="/initiation" className="mt-6 inline-flex items-center gap-2 font-bold text-[#11152b] underline decoration-[#7412b9] decoration-2 underline-offset-4">Voir les initiations <ArrowRight size={17} aria-hidden="true" /></Link>
             </aside>
           </div>
         </section>

@@ -26,10 +26,10 @@ export default function VideosPage() {
         <section className="py-14 md:py-24">
           <div className="site-shell grid gap-7 md:grid-cols-2">
             {videos.map((video) => (
-              <a key={video.id} href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noreferrer" aria-label={`${video.title} — regarder sur YouTube`} className="group overflow-hidden bg-[#0d2b47] text-white no-underline">
-                <div className="relative aspect-video overflow-hidden bg-[#061522]">
+              <a key={video.id} href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noreferrer" aria-label={`${video.title} — regarder sur YouTube`} className="group overflow-hidden bg-[#11152b] text-white no-underline">
+                <div className="relative aspect-video overflow-hidden bg-[#07070a]">
                   <Image src={`https://i.ytimg.com/vi/${video.id}/hqdefault.jpg`} alt="" fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover opacity-75 transition duration-500 group-hover:scale-105 group-hover:opacity-90" />
-                  <span className="absolute inset-0 grid place-items-center"><span className="grid size-16 place-items-center rounded-full bg-[#dfff45] text-[#081a2c] transition-transform group-hover:scale-110"><Play size={25} fill="currentColor" aria-hidden="true" /></span></span>
+                  <span className="absolute inset-0 grid place-items-center"><span className="grid size-16 place-items-center rounded-full bg-[#7412b9] text-white transition-transform group-hover:scale-110"><Play size={25} fill="currentColor" aria-hidden="true" /></span></span>
                 </div>
                 <div className="flex items-center justify-between gap-4 p-6">
                   <h2 className="text-xl font-extrabold leading-tight tracking-[-0.03em]">{video.title}</h2>
