@@ -51,14 +51,14 @@ export default function Home() {
               <h1 className="display-title hero-display-title max-w-5xl">Trois équipes.<br />Un ballon.<br />À toi de jouer.</h1>
               <div className="mt-10 flex flex-wrap gap-3">
                 <Link href="/initiation" className="button-primary">Participer à une initiation <ArrowRight size={18} aria-hidden="true" /></Link>
-                <Link href="/le-kin-ball" className="button-secondary">Découvrir le sport</Link>
+                <Link href="/le-kin-ball" className="button-secondary max-md:!border-white max-md:!bg-white max-md:!text-[#09090d]">Découvrir le sport</Link>
               </div>
             </div>
             <aside className="border-l-4 border-[#8b2ad1] bg-[#07070a]/45 p-6 backdrop-blur-sm lg:mb-2" aria-label="Informations pratiques">
               <p className="max-w-xs text-lg font-semibold leading-snug text-white/90">Un sport collectif spectaculaire, accessible et fondé sur la coopération.</p>
               <dl className="mt-8 grid gap-5 text-sm">
                 <div className="flex gap-4"><span aria-hidden="true" className="mt-1.5 size-3 shrink-0 bg-[#cba6ff] shadow-[5px_5px_0_rgba(116,18,185,0.65)]" /><div><dt className="text-sm font-extrabold uppercase tracking-[0.065em] text-white">Gymnase Marcel Cerdan</dt><dd className="mt-1 text-white/70">Lundi · 20h30–22h30</dd></div></div>
-                <div className="flex gap-4"><span aria-hidden="true" className="mt-1.5 size-3 shrink-0 bg-[#cba6ff] shadow-[5px_5px_0_rgba(116,18,185,0.65)]" /><div><dt className="text-sm font-extrabold uppercase tracking-[0.065em] text-white">Gymnase Cabrini</dt><dd className="mt-1 text-white/70">Jeudi · 20h30–22h30<br />20 rue du Docteur Sureau</dd></div></div>
+                <div className="flex gap-4"><span aria-hidden="true" className="mt-1.5 size-3 shrink-0 bg-[#cba6ff] shadow-[5px_5px_0_rgba(116,18,185,0.65)]" /><div><dt className="text-sm font-extrabold uppercase tracking-[0.065em] text-white">Gymnase Cabrini</dt><dd className="mt-1 text-white/70">Jeudi · 20h30–22h30<br />20 rue du Docteur Sureau<br /><span className="mt-1 inline-block text-xs font-bold uppercase tracking-[0.08em] text-[#cba6ff]">Bientôt disponible</span></dd></div></div>
               </dl>
             </aside>
           </div>

@@ -46,10 +46,11 @@ const manualArticles: ContentRecord[] = [
 <figure class="portrait-news-figure"><img src="/news/equipe-france-feminine-kin-ball-2026-v2.png" alt="Les sélections françaises de Kin-Ball réunies autour du ballon noir" width="945" height="1663" loading="lazy"></figure>
 <h2>Une Noiséenne sur le podium européen</h2>
 <p>Le Noisy Kin-Ball est particulièrement fier de compter <strong>Pauline Gadé</strong> parmi les joueuses de cette équipe de France. Cette médaille récompense une semaine exigeante, face aux meilleures sélections du continent, et tout le travail accompli en club comme en sélection.</p>
+<p>Le club était aussi représenté dans le staff tricolore par <strong>Simon Colatosti</strong>, sélectionneur adjoint de l’équipe de France féminine.</p>
 <p>La compétition s’est déroulée du 25 au 29 août 2026 à la Riethsporthalle d’Erfurt. Après les rencontres de poule et la phase finale, la sélection féminine française repart avec le bronze.</p>
 <h2>Bravo les Bleues</h2>
 <p>Félicitations à Pauline, à ses coéquipières et à l’ensemble du staff tricolore pour ce beau résultat. Toute la famille du Noisy Kin-Ball partage cette fierté et a hâte de retrouver Pauline sur les terrains.</p>
-<p><a href="/videos#coupe-europe-2026">Revoir la demi-finale féminine et les temps forts de la Coupe d’Europe en vidéo</a>.</p>
+<p><a href="/videos#coupe-europe-2026">Revoir les Bleues et les temps forts de la Coupe d’Europe en vidéo</a>.</p>
 <p><a href="https://kinball-euro2026.de/" target="_blank" rel="noreferrer">Retrouver le site officiel de la Coupe d’Europe 2026</a>.</p>`,
     legacyUrl: '/actualites/pauline-gade-bleues-bronze-europe-2026',
     featuredMediaId: null,

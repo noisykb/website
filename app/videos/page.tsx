@@ -10,24 +10,24 @@ export const metadata: Metadata = {
 
 const europeanCupVideos = [
   {
-    id: 'D85Xf_2C9t0',
-    title: 'Demi-finale Europe femmes',
-    detail: 'France · Allemagne · Suisse',
+    id: '_kZlYvwnjNU',
+    title: 'Finale Europe femmes',
+    detail: 'Tchéquie · France · Belgique',
   },
   {
-    id: '4T_F_ALPoLk',
-    title: 'Demi-finale Europe hommes',
-    detail: 'Tchéquie · France · Suisse',
+    id: 'd95reidwIWk',
+    title: 'Europe hommes · phase de groupes',
+    detail: 'France · Espagne · Hongrie',
   },
   {
-    id: 'ALfCSg834fU',
-    title: 'Demi-finale Open Pro · Pumpkins',
-    detail: 'Owlbears · Pumpkins · TSV Bobingen',
+    id: 'GJl8KMLykg4',
+    title: 'Europe hommes · match de classement',
+    detail: 'Allemagne · France · Hongrie',
   },
   {
-    id: '8crcvnVkLe0',
-    title: 'Open Pro · Pumpkins',
-    detail: 'TSV Bobingen · Hannover-Immensen · Pumpkins',
+    id: 'DpO7u7OCNto',
+    title: 'Ponts-de-Cé à l’Open Pro',
+    detail: 'Les Fous du Bus · AAEEC Ponts-de-Cé 2 · TSG Dissen',
   },
 ];
 
@@ -44,7 +44,7 @@ export default function VideosPage() {
   return (
     <>
       <main>
-        <PageHero eyebrow="À revoir" title="Vidéos" intro="La Coupe d’Europe 2026, les Pumpkins et toute l’énergie du Kin-Ball en match." />
+        <PageHero eyebrow="À revoir" title="Vidéos" intro="La Coupe d’Europe 2026, les tournois internationaux et toute l’énergie du Kin-Ball en match." />
         <section className="bg-white py-14 md:py-20">
           <div className="site-shell grid items-center gap-8 lg:grid-cols-[0.48fr_1fr] lg:gap-12">
             <div>
@@ -73,7 +73,7 @@ export default function VideosPage() {
               </div>
               <a href="https://www.youtube.com/@Kin-BallEuro2026" target="_blank" rel="noreferrer" className="shrink-0 font-bold text-[#11152b] underline decoration-[#7412b9] decoration-2 underline-offset-4">Voir la chaîne officielle ↗</a>
             </div>
-            <p className="mt-7 max-w-3xl text-lg leading-relaxed text-[#4d5161]">Revivez les demi-finales des sélections françaises et suivez les Pumpkins dans l’International Open Pro.</p>
+            <p className="mt-7 max-w-3xl text-lg leading-relaxed text-[#4d5161]">Revivez les rencontres marquantes des sélections françaises et retrouvez Ponts-de-Cé dans l’International Open Pro.</p>
             <div className="mt-10 grid gap-7 md:grid-cols-2">
               {europeanCupVideos.map((video, index) => (
                 <a key={video.id} href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noreferrer" aria-label={`${video.title} — regarder sur YouTube`} className="group overflow-hidden bg-[#11152b] text-white no-underline">
