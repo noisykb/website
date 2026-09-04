@@ -21,7 +21,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Link href="/initiation" className="rounded-full border border-white/30 px-4 py-2 text-sm font-bold text-white no-underline transition-colors hover:bg-white hover:text-[#09090d]">Essayer</Link>
+          <Link href="/initiation" className="rounded-full border border-[#b85cf0] bg-[#7412b9] px-5 py-2.5 text-sm font-extrabold uppercase tracking-[0.055em] text-white no-underline shadow-[0_8px_26px_rgba(116,18,185,0.48)] transition hover:border-white hover:bg-white hover:text-[#7412b9]">Essayer</Link>
           <details className="group relative lg:hidden">
             <summary className="flex cursor-pointer list-none items-center rounded-full border border-white/30 px-4 py-2 text-sm font-bold [&::-webkit-details-marker]:hidden">Menu</summary>
             <nav className="absolute right-0 top-12 grid min-w-56 overflow-hidden rounded-2xl bg-white p-2 text-[#09090d] shadow-2xl" aria-label="Navigation mobile">
