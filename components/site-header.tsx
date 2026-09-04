@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { HardLink as Link } from '@/components/hard-link';
 
 const navigation = [
   { href: '/le-club', label: 'Le club' },

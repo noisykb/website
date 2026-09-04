@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { HardLink as Link } from '@/components/hard-link';
 import { notFound, redirect } from 'next/navigation';
 import { PageHero } from '@/components/page-hero';
 import { SiteFooter } from '@/components/site-footer';

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { HardLink as Link } from '@/components/hard-link';
 
 export function SiteFooter() {
   return (

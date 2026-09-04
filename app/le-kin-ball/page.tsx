@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { ArrowRight, Camera, CircleDot, Handshake, UsersRound } from 'lucide-react';
-import Link from 'next/link';
+import { HardLink as Link } from '@/components/hard-link';
 import { PageHero } from '@/components/page-hero';
 import { SiteFooter } from '@/components/site-footer';
 
