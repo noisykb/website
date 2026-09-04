@@ -6,7 +6,7 @@ from __future__ import annotations
 import json
 import re
 import sys
-from html import unescape
+from html import escape, unescape
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
@@ -111,9 +111,19 @@ def localize_url(value: str) -> str:
     return value
 
 
+def localize_media_url(value: str) -> str:
+    parsed = urlparse(value)
+    marker = "/wp-content/uploads/"
+    if marker not in parsed.path:
+        return value
+    media_path = parsed.path.split(marker, 1)[1]
+    media_path = re.sub(r"-\d+x\d+(?=\.[^.]+$)", "", media_path)
+    return f"/media/{media_path}"
+
+
 class Sanitizer(HTMLParser):
-    allowed = {"p", "h2", "h3", "h4", "ul", "ol", "li", "strong", "em", "a", "blockquote", "br"}
-    void = {"br"}
+    allowed = {"p", "h2", "h3", "h4", "ul", "ol", "li", "strong", "em", "a", "blockquote", "br", "figure", "figcaption", "img"}
+    void = {"br", "img"}
 
     def __init__(self):
         super().__init__(convert_charrefs=True)
@@ -125,6 +135,18 @@ class Sanitizer(HTMLParser):
             self.skip_depth += 1
             return
         if self.skip_depth or tag not in self.allowed:
+            return
+        if tag == "img":
+            source = next((value for key, value in attrs if key == "src"), None)
+            if not source:
+                return
+            alt = next((value for key, value in attrs if key == "alt"), "") or ""
+            width = next((value for key, value in attrs if key == "width" and str(value).isdigit()), None)
+            height = next((value for key, value in attrs if key == "height" and str(value).isdigit()), None)
+            dimensions = f' width="{width}" height="{height}"' if width and height else ""
+            self.output.append(
+                f'<img src="{escape(localize_media_url(source), quote=True)}" alt="{escape(alt, quote=True)}"{dimensions} loading="lazy">'
+            )
             return
         if tag == "a":
             href = next((value for key, value in attrs if key == "href"), None)
@@ -168,7 +190,7 @@ def plain_text(source: str) -> str:
 
 
 def main() -> None:
-    sql_path = Path(sys.argv[1] if len(sys.argv) > 1 else "../work/db-export/if0_37183962_noisykb.sql")
+    sql_path = Path(sys.argv[1] if len(sys.argv) > 1 else "../work/db-export/wordpress-export.sql")
     destination = Path(sys.argv[2] if len(sys.argv) > 2 else "content")
     sql = sql_path.read_text(encoding="utf-8", errors="replace")
     posts = list(insert_rows(sql, "wp_posts"))

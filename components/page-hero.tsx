@@ -7,7 +7,7 @@ export function PageHero({ eyebrow, title, intro }: { eyebrow: string; title: st
       <div aria-hidden="true" className="absolute -right-24 -top-36 size-[28rem] rounded-full border-[4.5rem] border-[#7412b9]/85" />
       <div className="site-shell relative z-10">
         <p className="eyebrow text-[#cba6ff]">{eyebrow}</p>
-        <h1 className="mt-6 max-w-5xl text-5xl font-black leading-[0.92] tracking-[-0.06em] md:text-8xl">{title}</h1>
+        <h1 className="mt-6 max-w-5xl text-5xl font-black leading-[0.98] tracking-[-0.03em] md:text-8xl">{title}</h1>
         {intro ? <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/75 md:text-xl">{intro}</p> : null}
       </div>
     </section>

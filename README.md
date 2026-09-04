@@ -26,7 +26,7 @@ Les contenus publiés sont stockés dans `content/wordpress-content.json`. Pour
 les régénérer à partir de l’export SQL conservé dans le workspace :
 
 ```bash
-python3 scripts/extract-wordpress.py ../work/db-export/if0_37183962_noisykb.sql content
+python3 scripts/extract-wordpress.py ../work/db-export/wordpress-export.sql content
 ```
 
 Le script ne reprend que les pages et articles publiés. Il supprime les éléments

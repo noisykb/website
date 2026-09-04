@@ -1,11 +1,9 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 const navigation = [
   { href: '/le-club', label: 'Le club' },
   { href: '/le-kin-ball', label: 'Le Kin-Ball' },
-  { href: '/les-equipes', label: 'Équipes' },
-  { href: '/resultats', label: 'Résultats' },
+  { href: '/videos', label: 'Vidéos' },
   { href: '/actualites', label: 'Actualités' },
 ];
 
@@ -14,12 +12,12 @@ export function SiteHeader() {
     <header className="absolute inset-x-0 top-0 z-30 border-b border-white/15 text-white">
       <div className="site-shell flex h-20 items-center justify-between gap-5">
         <Link href="/" className="flex items-center gap-3 text-white no-underline" aria-label="Noisy Kin-Ball — Accueil">
-          <Image src="/brand/noisy-kin-ball-logo.png" alt="" width={52} height={49} className="h-12 w-auto object-contain" priority />
+          <img src="/brand/noisy-kin-ball-mark-white.png" alt="" width="52" height="52" className="size-12 object-contain" />
           <span className="hidden text-sm font-extrabold uppercase tracking-[0.08em] sm:block">Noisy Kin-Ball</span>
         </Link>
         <nav className="hidden items-center gap-6 lg:flex" aria-label="Navigation principale">
           {navigation.map((item) => (
-            <Link key={item.href} href={item.href} className="text-sm font-semibold text-white/80 no-underline transition-colors hover:text-white">{item.label}</Link>
+            <Link key={item.href} href={item.href} className="text-sm font-extrabold uppercase tracking-[0.065em] text-white/85 no-underline transition-colors hover:text-white">{item.label}</Link>
           ))}
         </nav>
         <div className="flex items-center gap-2">
@@ -30,7 +28,7 @@ export function SiteHeader() {
               {navigation.map((item) => (
                 <Link key={item.href} href={item.href} className="rounded-xl px-4 py-3 text-sm font-bold no-underline hover:bg-[#f1ebf8]">{item.label}</Link>
               ))}
-              <Link href="/nous-rejoindre" className="rounded-xl px-4 py-3 text-sm font-bold no-underline hover:bg-[#f1ebf8]">Nous rejoindre</Link>
+              <Link href="/initiation" className="rounded-xl px-4 py-3 text-sm font-bold no-underline hover:bg-[#f1ebf8]">Nous rejoindre</Link>
             </nav>
           </details>
         </div>

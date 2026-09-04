@@ -17,8 +17,9 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-border: var(--border);
   --color-ring: var(--ring);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-barlow);
+  --font-serif: var(--font-roboto-slab);
+  --font-mono: var(--font-jetbrains-mono);
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
@@ -51,7 +52,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: var(--font-barlow), Arial, sans-serif;
 }
 
 body {
@@ -60,6 +61,13 @@ body {
   color: var(--foreground);
   font-size: 1rem;
   line-height: 1.65;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-roboto-slab), Rockwell, Georgia, serif;
+  letter-spacing: -0.015em;
 }
 
 ::selection {
@@ -107,8 +115,12 @@ summary:focus-visible {
   margin: 0;
   font-size: clamp(3.4rem, 9.5vw, 8.3rem);
   font-weight: 900;
-  letter-spacing: -0.075em;
-  line-height: 0.84;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+}
+
+.hero-display-title {
+  text-shadow: 0 2px 12px rgb(0 0 0 / 0.48), 0 1px 2px rgb(0 0 0 / 0.75);
 }
 
 .button-primary,
@@ -158,8 +170,8 @@ summary:focus-visible {
 .rich-content h4 {
   color: #09090d;
   font-weight: 850;
-  letter-spacing: -0.035em;
-  line-height: 1.12;
+  letter-spacing: -0.02em;
+  line-height: 1.18;
 }
 
 .rich-content h2 {
@@ -173,6 +185,18 @@ summary:focus-visible {
 .rich-content li + li { margin-top: 0.45rem; }
 .rich-content a { color: #7412b9; font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .rich-content blockquote { border-left: 5px solid #7412b9; padding-left: 1.25rem; color: #5e6474; font-style: italic; }
+.rich-content figure { margin-inline: 0; }
+.rich-content img { display: block; width: 100%; height: auto; max-height: 44rem; object-fit: cover; }
+.rich-content img[src*='noisy-champion-ligue-est'] { max-height: none; object-fit: contain; }
+.rich-content figcaption { margin-top: 0.65rem; color: #6a6d7b; font-size: 0.9rem; line-height: 1.5; }
+.rich-content .kinball-lead { color: #11152b; font-size: clamp(1.2rem, 2.2vw, 1.45rem); font-weight: 650; line-height: 1.65; }
+.rich-content .kinball-action-list { margin-top: 1.75rem; padding: 0; list-style: none; counter-reset: kinball-step; }
+.rich-content .kinball-action-list li { position: relative; padding: 1rem 0 1rem 4.5rem; border-top: 1px solid #d9d5e0; counter-increment: kinball-step; }
+.rich-content .kinball-action-list li::before { position: absolute; left: 0; top: 0.85rem; content: '0' counter(kinball-step); color: #7412b9; font-family: var(--font-jetbrains-mono), monospace; font-size: 1.25rem; font-weight: 900; }
+.rich-content .kinball-portrait-photo { max-height: 42rem; object-position: center 38%; }
+.rich-content .portrait-news-figure { max-width: 32rem; padding: 1rem; background: #11152b; }
+.rich-content .portrait-news-figure img { max-height: 42rem; object-fit: cover; object-position: center 42%; }
+.rich-content .portrait-news-figure figcaption { color: rgb(255 255 255 / 0.7); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
